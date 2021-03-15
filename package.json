@@ -1,0 +1,17 @@
+{
+  "name": "player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aedes": "^0.45.0",
+    "async-mqtt": "^2.6.1",
+    "node-omxplayer": "^0.6.1",
+    "node-schedule": "^2.0.0"
+  }
+}

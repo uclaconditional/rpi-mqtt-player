@@ -1,0 +1,6 @@
+{
+  "actAsController": true,
+  "video": "test.mp4",
+  "controllerUrl": "charybdis.local",
+  "totalNodes": 2
+}
