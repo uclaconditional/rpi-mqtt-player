@@ -1,4 +1,4 @@
-# rpi-mqtt-player
+# Synchronized Video Player the Raspberry PI using MQTT
 
 
 
