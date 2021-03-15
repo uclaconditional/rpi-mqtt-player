@@ -1,4 +1,4 @@
-# Synchronized Video Player the Raspberry PI using MQTT
+# Synchronized Video Player for the Raspberry PI using MQTT
 This is a small node app that uses MQTT to synchronize the playing of videos on multiple raspberry pis. A single controller instance listens for connection messages (/ready) and counts how many nodes have connected. When every node is ready, the controller tells all nodes to play one minute in the future (to help account for differences in the message being recieved). When the video is finished playing, nodes send a `/done` message and the controller waits until all nodes are done, and then sends the `/play` message to start repeat loop.
 
 ## App Config
