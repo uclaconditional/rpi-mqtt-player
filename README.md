@@ -39,4 +39,4 @@ If you need to make changes in the future, you can control the process with `pm2
 ### Setup PM2 to run on startup
 `pm2 startup` and follow the onscreen instructions. If you ever want to undo this you can run `pm2 unstartup systemd`
 
-
+Sometimes it is helpful to see the application output, you can do that but running `pm2 log`
