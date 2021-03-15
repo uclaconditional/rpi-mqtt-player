@@ -27,12 +27,16 @@ See this gist for pi zero https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d
 
 
 ### Install PM2
-`sudo npm install -g pm2` then `pm2 status` to see if it is running
+`sudo npm install -g pm2`
+After install you need to get the daemon running, easiest way is to run `pm2 status` which you can use in the future to see the status of your app.
 
 ### Run the app with PM2
-cd into the directory with the code, and run `pm2 start app.js` then "save" the app by running `pm2 save`
+cd into the directory with the code, and run `pm2 start app.js --name mqtt-player` then "save" the app by running `pm2 save`
 
-### Config PM2 to run on startup
-`pm2 startup` and follow the onscreen instructions
+If you need to make changes in the future, you can control the process with `pm2 stop mqtt-player` and `pm2 start mqtt-player`
+
+
+### Setup PM2 to run on startup
+`pm2 startup` and follow the onscreen instructions. If you ever want to undo this you can run `pm2 unstartup systemd`
 
 
