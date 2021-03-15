@@ -2,7 +2,7 @@ const mqtt = require('mqtt');
 const Omx = require('node-omxplayer');    // https://github.com/Ap0c/node-omxplayer
 const schedule = require('node-schedule');
 
-let { controllerUrl, actAsController, video, totalNodes } = require('./config.json');
+let { controllerUrl, actAsController, video, totalNodes, volume } = require('./config.json');
 
 console.log('--- STARTING NETWORK PLAYER ---');
 console.log('controllerUrl:', controllerUrl);
@@ -102,7 +102,7 @@ try {
       video,  // video file
       'both', // audio output
       false,  // loop
-      50      // initial volume
+      volume      // initial volume
     );
     player.pause();
     return player;
