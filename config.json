@@ -2,5 +2,6 @@
   "actAsController": true,
   "video": "test.mp4",
   "controllerUrl": "charybdis.local",
-  "totalNodes": 2
+  "totalNodes": 2,
+  "volume": 50,
 }
