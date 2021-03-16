@@ -2,12 +2,12 @@
 This is a small node app that uses MQTT to synchronize the playing of videos on multiple raspberry pis. A single controller instance listens for connection messages (/ready) and counts how many nodes have connected. When every node is ready, the controller tells all nodes to play one minute in the future (to help account for differences in the message being recieved). When the video is finished playing, nodes send a `/done` message and the controller waits until all nodes are done, and then sends the `/play` message to start repeat loop.
 
 ## App Config
-The config file contains 4 variables. 
+The config file contains 5 variables. 
 `totalNodes` is the number of nodes who are synched
 `video` is the path to the video file to play
 `actAsController` should be true for the machine that is acting as the controller for the network. All synched nodes should only have 1 controller.
 `controllerUrl` is the IP or hostname of the machine where the controller lives. This is only necessary on machines that aren't the controller. See below to set the hostname so you can use the X.local syntax and not fret of IP addresses.
-
+`volume` is the initial volume for the video
 
 ## Pi Setup
 
@@ -25,6 +25,8 @@ This isn't totally necessary, but it will make life easier when setting the cont
 ### Install nodejs
 See this gist for pi zero https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb
 
+### Install Dependencies
+`npm i`
 
 ### Install PM2
 `sudo npm install -g pm2`
