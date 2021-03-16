@@ -1,7 +1,7 @@
 {
   "actAsController": true,
   "video": "test.mp4",
-  "controllerUrl": "charybdis.local",
+  "controllerUrl": "mqtt://charybdis.local",
   "totalNodes": 2,
   "volume": 50
 }
